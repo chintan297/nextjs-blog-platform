@@ -1,6 +1,7 @@
 import { fetchComments } from "@/lib/api";
 import styles from "@/styles/CommentSection.module.css";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AverageIcon, BadIcon, GoodIcon, NiceIcon, NormalIcon } from "./Icons";
 
@@ -97,9 +98,13 @@ export default function CommentSection({ slug }: { slug: string }) {
         )}
         {comments.map((c) => (
           <li key={c._id} className={styles.comment}>
-            <img
-              src={`https://ui-avatars.com/api/?name=${c.author}&background=ff6b6b&color=fff`}
+            <Image
+              src={`https://i.pravatar.cc/150?u=${encodeURIComponent(
+                c.author
+              )}`}
               alt={c.author}
+              width={48}
+              height={48}
               className={styles.avatar}
               loading="lazy"
             />

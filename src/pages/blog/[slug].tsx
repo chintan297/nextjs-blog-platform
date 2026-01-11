@@ -108,7 +108,7 @@ export default function BlogPost({
               <div className={styles.authorBlock}>
                 <Image
                   className={styles.avatar}
-                  src="https://i.pravatar.cc/150?u=alex_carter"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&auto=format&fit=crop"
                   alt="Alex Carter"
                   width={32}
                   height={32}
@@ -158,9 +158,11 @@ export default function BlogPost({
             <div className={styles.desktopAuthor}>
               <div className={styles.aboutSection}>
                 <h3 className={styles.aboutTitle}>About Alex Carter</h3>
-                <img
-                  src="https://i.pravatar.cc/150?u=alex_carter"
+                <Image
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&auto=format&fit=crop"
                   alt="Alex Carter"
+                  width={80}
+                  height={80}
                   className={styles.aboutImage}
                 />
                 <p className={styles.aboutBio}>
@@ -213,7 +215,7 @@ export default function BlogPost({
           <aside className={styles.sidebar}>
             <h3 className={styles.sidebarTitle}>Explore more</h3>
             <div className={styles.exploreListDesktop}>
-              {relatedPosts.map((related) => (
+              {relatedPosts.slice(0, 4).map((related) => (
                 <Link
                   href={`/blog/${related.slug}`}
                   key={related._id || related.slug}
@@ -223,14 +225,11 @@ export default function BlogPost({
                     {/* Placeholder Image */}
 
                     {related.image ? (
-                      <img
+                      <Image
                         src={related.image}
                         alt={related.title}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
+                        fill
+                        className={styles.sidebarImageElement}
                       />
                     ) : (
                       <div
@@ -276,12 +275,13 @@ export default function BlogPost({
                     className={styles.mobileSlideCard}
                   >
                     <div className={styles.mobileSlideImageContainer}>
-                      <img
+                      <Image
                         src={
                           relatedPosts[exploreIndex].image ||
                           "https://via.placeholder.com/600x400"
                         }
                         alt={relatedPosts[exploreIndex].title}
+                        fill
                         className={styles.mobileSlideImage}
                       />
                       <div className={styles.mobileSlideBadge}>A</div>
@@ -338,7 +338,7 @@ export default function BlogPost({
                 {/* Guide 1 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://i.pravatar.cc/150?u=miranda"
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&auto=format&fit=crop"
                     alt="Miranda Rachel"
                     height={60}
                     width={60}
@@ -358,7 +358,7 @@ export default function BlogPost({
                 {/* Guide 2 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://i.pravatar.cc/150?u=danielle"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&auto=format&fit=crop"
                     alt="Miranda Rachel"
                     height={60}
                     width={60}
@@ -378,7 +378,7 @@ export default function BlogPost({
                 {/* Guide 3 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://i.pravatar.cc/150?u=haerin"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&auto=format&fit=crop"
                     alt="Kang Haerin"
                     height={60}
                     width={60}
@@ -404,9 +404,11 @@ export default function BlogPost({
         <div className={styles.tabletAuthor}>
           <div className={styles.aboutSection}>
             <h3 className={styles.aboutTitle}>About Alex Carter</h3>
-            <img
-              src="https://i.pravatar.cc/150?u=alex_carter"
+            <Image
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&auto=format&fit=crop"
               alt="Alex Carter"
+              width={80}
+              height={80}
               className={styles.aboutImage}
             />
             <p className={styles.aboutBio}>

@@ -1,6 +1,6 @@
 .section {
-  margin-top: 4rem;
-  padding-top: 2rem;
+  margin-top: 0;
+  padding-top: 1rem;
   font-family: var(--font-lato), sans-serif;
   color: var(--text-primary);
   /* Resetting container styles as it is now nested */

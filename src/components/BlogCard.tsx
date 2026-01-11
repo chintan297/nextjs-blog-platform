@@ -1,4 +1,5 @@
 import styles from "@/styles/BlogCard.module.css";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Post {
@@ -22,7 +23,12 @@ export default function BlogCard({ post }: { post: Post }) {
     <Link href={`/blog/${post.slug}`} className={styles.card}>
       <div className={styles.imagePlaceholder}>
         {post.image ? (
-          <img src={post.image} alt={post.title} />
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className={styles.cardImage}
+          />
         ) : (
           <div className={styles.placeholderGradient}></div>
         )}
