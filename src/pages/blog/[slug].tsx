@@ -108,7 +108,7 @@ export default function BlogPost({
               <div className={styles.authorBlock}>
                 <Image
                   className={styles.avatar}
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  src="https://i.pravatar.cc/150?u=alex_carter"
                   alt="Alex Carter"
                   width={32}
                   height={32}
@@ -159,7 +159,7 @@ export default function BlogPost({
               <div className={styles.aboutSection}>
                 <h3 className={styles.aboutTitle}>About Alex Carter</h3>
                 <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  src="https://i.pravatar.cc/150?u=alex_carter"
                   alt="Alex Carter"
                   className={styles.aboutImage}
                 />
@@ -338,7 +338,7 @@ export default function BlogPost({
                 {/* Guide 1 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    src="https://i.pravatar.cc/150?u=miranda"
                     alt="Miranda Rachel"
                     height={60}
                     width={60}
@@ -358,7 +358,7 @@ export default function BlogPost({
                 {/* Guide 2 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    src="https://i.pravatar.cc/150?u=danielle"
                     alt="Miranda Rachel"
                     height={60}
                     width={60}
@@ -378,7 +378,7 @@ export default function BlogPost({
                 {/* Guide 3 */}
                 <div className={styles.tourGuideItem}>
                   <Image
-                    src="https://randomuser.me/api/portraits/women/68.jpg"
+                    src="https://i.pravatar.cc/150?u=haerin"
                     alt="Kang Haerin"
                     height={60}
                     width={60}
@@ -405,7 +405,7 @@ export default function BlogPost({
           <div className={styles.aboutSection}>
             <h3 className={styles.aboutTitle}>About Alex Carter</h3>
             <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
+              src="https://i.pravatar.cc/150?u=alex_carter"
               alt="Alex Carter"
               className={styles.aboutImage}
             />
