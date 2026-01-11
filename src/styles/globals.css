@@ -1,0 +1,205 @@
+:root {
+  /* Core Colors - Clean Editorial */
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f9fafb; /* Light Gray for secondary backgrounds */
+  --text-primary: #10152e; /* Dark Gray/Black */
+  --text-secondary: #000; /* Medium Gray */
+  --text-secondary-100: #000; /* Medium Gray */
+  --text-secondary-200: #757575;
+  --text-secondary-300: #121212; /* Medium Gray */
+  --text-border: #dedede;
+  --text-muted: #9ca3af; /* Light Gray */
+
+  /* Borders & Shadows */
+  --border: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Accents */
+  --accent: #2563eb; /* Primary Blue */
+  --accent-hover: #1d4ed8;
+
+  /* Category Colors */
+  --cat-fitness: #10b981; /* Emerald */
+  --cat-lifestyle: #3b82f6; /* Blue */
+  --cat-health: #f59e0b; /* Amber */
+  --cat-workouts: #f43f5e; /* Rose */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-lato), sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+  transform: translateY(-1px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  p,
+  a,
+  span {
+    letter-spacing: 0.5px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.875rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 9px 16px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,185 @@
+/* Editor Container - Matches standard card/section style */
+.container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px; /* Matches hero image/sidebar radius */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Status Messages - Refined to match site palette */
+.messageSuccess {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: #d1fae5; /* Soft Emerald */
+  color: #065f46; /* Dark Emerald */
+  border: 1px solid #a7f3d0;
+  letter-spacing: 0.5px;
+}
+
+.messageError {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: #fee2e2; /* Soft Rose */
+  color: #991b1b; /* Dark Rose */
+  border: 1px solid #fecaca;
+  letter-spacing: 0.5px;
+}
+
+/* Editor Textarea */
+.editor {
+  width: 100%;
+  min-height: 300px;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-top: none; /* Connect to toolbar */
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toolbar {
+  display: flex;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.tab {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.tabActive {
+  background: var(--surface);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.preview {
+  width: 100%;
+  min-height: 300px;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 1rem;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.preview h1,
+.preview h2,
+.preview h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.preview p {
+  margin-bottom: 1rem;
+}
+
+.editor:focus {
+  outline: none;
+  border-color: var(--text-secondary);
+}
+
+.editor:focus-visible {
+  outline: none;
+  border-color: var(--accent, #2563eb);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+/* Save Button - Matches global .btn-primary */
+.saveButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* Primary Button Style from globals.css */
+  background-color: var(--text-primary);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #000;
+  transform: translateY(-1px);
+}
+
+.saveButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.saveButton:disabled {
+  background-color: var(--text-border);
+  color: var(--text-secondary-200);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.saveButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--text-primary);
+}
